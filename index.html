@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171126"><title>Happy Birthday Fatimah ✦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Age splash – shows first -->
+<div class="age-splash" id="ageSplash">
+  <div class="splash-inner">
+    <p class="splash-label">A new chapter begins</p>
+    <div class="splash-age" aria-label="Turning 19">
+      <span class="s-old">18</span>
+      <span class="s-arrow">→</span>
+      <span class="s-new">19</span>
+    </div>
+    <p class="splash-name">Fatimah</p>
+    <p class="splash-tap" id="splashTap">tap anywhere to continue ✨</p>
+  </div>
+</div>
+<div class="stars"></div><div class="pattern"></div>
+<main>
+<section class="hero">
+  <div class="crescent" aria-hidden="true">☾</div>
+  <!-- Easter egg 1: tiny gift near crescent -->
+  <button class="egg egg-1" data-msg="You were one of the first people who made school feel like home. Forever grateful 🥹💛" aria-label="A little gift">🎁</button>
+  <div class="hero-copy">
+    <p class="eyebrow">BISMILLAH · A LITTLE CELEBRATION FOR</p>
+    <h1 id="name">Fatimah</h1>
+    <div class="gold-line"><span>✦</span></div>
+    <p class="sub">A soft little corner of the internet made just for you to celebrate another beautiful year of your life.</p>
+    <p class="hint">Psst… there are tiny gifts hidden on this page. Tap the 🎁s when you find them ✨</p>
+    <button class="start" id="start">Open your birthday page <span>↓</span></button>
+  </div>
+  <div class="hero-photo" id="heroPhoto" style="background-image:url('media/hero_photo.jpg');background-size:cover;background-position:center 15%"></div>
+</section>
+
+<section class="intro section">
+  <p class="kicker">ALHAMDULILLAH FOR ANOTHER YEAR</p>
+  <h2>May this year be filled with barakah.</h2>
+  <p id="intro">May Allah bless your new age with peace, happiness, good health, beautiful moments and barakah in everything you do. Ameen.</p>
+  <div class="dua">رَبِّ زِدْنِي عِلْمًا <small>“My Lord, increase me in knowledge.” · Qur'an 20:114</small></div>
+</section>
+
+<!-- Banner section using the new photo -->
+<section class="banner-section">
+  <div class="banner-image" id="bannerImage"></div>
+  <div class="banner-overlay">
+    <p class="banner-label">FOR YOU</p>
+    <p class="banner-quote">“I’m genuinely grateful I met you.”</p>
+  </div>
+  <!-- Easter egg 2 -->
+  <button class="egg egg-2" data-msg="From showing me around to always listening… you’ve been such a soft place to land. Thank you for that 🫶🏽" aria-label="A little gift">🎁</button>
+</section>
+
+<section class="memories section">
+  <div class="section-head">
+    <div>
+      <p class="kicker">LITTLE MEMORIES</p>
+      <h2>Moments worth keeping.</h2>
+    </div>
+  </div>
+  <div class="gallery" id="photoGallery">
+    <!-- filled by JS -->
+  </div>
+  <!-- Easter egg 3 -->
+  <button class="egg egg-3" data-msg="Your advice and the way you just get it… I appreciate you more than you know ❤️" aria-label="A little gift">🎁</button>
+</section>
+
+<section class="videos section" id="videosSection">
+  <div class="section-head">
+    <div>
+      <p class="kicker">LITTLE MOMENTS ON VIDEO</p>
+      <h2>When she gets a little too silly 😌</h2>
+    </div>
+  </div>
+
+  <div class="video-marquees">
+    <!-- TOP strip: slides to the RIGHT -->
+    <div class="marquee-row top-row">
+      <div class="marquee-track track-right" id="trackTop">
+        <!-- filled by JS (duplicated for seamless loop) -->
+      </div>
+    </div>
+    <!-- BOTTOM strip: slides to the LEFT -->
+    <div class="marquee-row bottom-row">
+      <div class="marquee-track track-left" id="trackBottom">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+  <!-- Easter egg 4 -->
+  <button class="egg egg-4" data-msg="May this new year bring you happiness, success, peace, and everything you deserve. Ameen 🤲" aria-label="A little gift">🎁</button>
+</section>
+
+<section class="letter section">
+  <div class="letter-card">
+    <div class="ornament">✦</div>
+    <p class="kicker">A FEW WORDS FOR YOU</p>
+    <h2>For my bestieee.</h2>
+    
+    <div class="message-spread" id="messageSpread">
+      <!-- filled by JS with paragraphs -->
+    </div>
+    
+    <div class="signature">— From Ibrahim 🥹❤️</div>
+  </div>
+  <!-- Easter egg 5 -->
+  <button class="egg egg-5" data-msg="Happy birthday, bestieee 🥳🎂🫶🏽 You’re one of the sweetest people I know. Keep shining." aria-label="A little gift">🎁</button>
+</section>
+
+<section class="ending">
+  <div class="ending-motif">☾ ✦ ☽</div>
+  <p>HAPPY BIRTHDAY</p>
+  <h2 id="endName">Fatimah</h2>
+  <span>May Allah keep you under His mercy, always. Ameen.</span>
+  <p class="found-count" id="foundCount">Gifts found: 0 / 5</p>
+</section>
+</main>
+
+<!-- Video popup modal -->
+<div class="video-modal" id="videoModal" hidden>
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <video id="modalVideo" controls playsinline></video>
+    <p class="modal-caption" id="modalCaption"></p>
+  </div>
+</div>
+
+<!-- Gift reveal modal -->
+<div class="gift-modal" id="giftModal" hidden>
+  <div class="gift-backdrop" id="giftBackdrop"></div>
+  <div class="gift-box">
+    <div class="gift-icon">🎁</div>
+    <p class="gift-text" id="giftText"></p>
+    <button class="gift-ok" id="giftOk">Aww 💛</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
